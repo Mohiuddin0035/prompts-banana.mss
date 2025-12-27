@@ -7,4 +7,18 @@
     "image": "assets/images/subway.webp",
     "rating": 5.0
   }
+  ,
+{
+    "id": 2,
+    "title": "maroon suit jacket 25s",
+    "prompt": "Realistic human portrait of a handsome man ((preserve the exact real face, hairstyle, skin tone, and body identity no changes) in his 25s, with a natural, messy wavy black hair. He is wearing a maroon suit jacket over a white, unbuttoned collared shirt and black pants. His hands are in his pockets, and he is looking slightly to the side with a calm, confident expression. The background is a collage of old newspapers. The lighting is soft and artistic, highlighting his features. The style should be realistic and detailed.",
+    "tags": [
+        "portrait",
+        "suit",
+        "professional",
+        "lifestyle"
+    ],
+    "image": "assets/images/prompt2.jpeg",
+    "rating": 5
+}
 ]
