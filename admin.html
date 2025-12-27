@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Prompt Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #eee;
+            font-family: 'Space Mono', monospace;
+            padding: 2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        h2 { border-bottom: 1px solid #333; padding-bottom: 10px; color: #3b82f6; }
+        
+        /* Form Styles */
+        label { display: block; margin-top: 15px; color: #888; font-size: 0.9rem; }
+        input, textarea {
+            width: 100%;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 6px;
+            font-family: inherit;
+            outline: none;
+        }
+        input:focus, textarea:focus { border-color: #3b82f6; }
+        
+        /* Buttons */
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .btn:hover { background: #2563eb; }
+        
+        /* Output Box */
+        #output-area {
+            display: none;
+            background: #111;
+            border: 1px solid #333;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+        pre { white-space: pre-wrap; word-wrap: break-word; color: #a5f3fc; }
+        .copy-btn { background: #10b981; margin-top: 10px; }
+        .copy-btn:hover { background: #059669; }
+
+        .hint { font-size: 0.75rem; color: #555; }
+    </style>
+</head>
+<body>
+
+    <h2>🛠️ Prompt Code Generator</h2>
+    <p style="color:#666; font-size:0.9rem;">Fill this form to generate error-free JSON code for your database.</p>
+
+    <label>ID (Must be unique)</label>
+    <input type="number" id="id" placeholder="e.g. 4">
+
+    <label>Title</label>
+    <input type="text" id="title" placeholder="e.g. Neon Cyber City">
+
+    <label>Image Path (Upload image to assets/images/ first)</label>
+    <input type="text" id="image" value="assets/images/" placeholder="assets/images/my-pic.jpg">
+    <div class="hint">Make sure the image name has NO spaces. Use dashes (my-pic.jpg).</div>
+
+    <label>Rating (1.0 - 5.0)</label>
+    <input type="number" step="0.1" id="rating" placeholder="e.g. 4.8">
+
+    <label>Tags (Comma separated)</label>
+    <input type="text" id="tags" placeholder="e.g. neon, dark, city">
+
+    <label>Prompt</label>
+    <textarea id="prompt" rows="5" placeholder="Paste your full prompt here..."></textarea>
+
+    <button class="btn" onclick="generateJSON()">GENERATE CODE</button>
+
+    <div id="output-area">
+        <h3 style="margin-top:0; color:#888;">Copy this code:</h3>
+        <textarea id="finalCode" rows="12" style="color:#4ade80; font-family:monospace;"></textarea>
+        <button class="btn copy-btn" onclick="copyCode()">COPY TO CLIPBOARD</button>
+        <p style="color:yellow; font-size:0.8rem; margin-top:10px;">
+            ⚠️ Don't forget to add a <b>comma (,)</b> after the previous item in prompts.json!
+        </p>
+    </div>
+
+    <script>
+        function generateJSON() {
+            const id = document.getElementById('id').value;
+            const title = document.getElementById('title').value;
+            const image = document.getElementById('image').value;
+            const rating = document.getElementById('rating').value;
+            const tags = document.getElementById('tags').value.split(',').map(t => t.trim()).filter(t => t);
+            const prompt = document.getElementById('prompt').value;
+
+            if(!id || !title || !prompt) {
+                alert("Please fill in ID, Title and Prompt!");
+                return;
+            }
+
+            // Creating the object
+            const jsonObj = {
+                id: parseInt(id),
+                title: title,
+                prompt: prompt,
+                tags: tags,
+                image: image,
+                rating: parseFloat(rating)
+            };
+
+            // Formatting JSON properly
+            // Putting a comma at the start to remind user (safe trick)
+            const jsonString = ",\n" + JSON.stringify(jsonObj, null, 4);
+
+            document.getElementById('finalCode').value = jsonString;
+            document.getElementById('output-area').style.display = 'block';
+        }
+
+        function copyCode() {
+            const codeBox = document.getElementById('finalCode');
+            codeBox.select();
+            document.execCommand("copy");
+            alert("Code Copied! Now paste it at the bottom of data/prompts.json");
+        }
+    </script>
+
+</body>
+</html>

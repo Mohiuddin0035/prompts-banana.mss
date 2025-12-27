@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "title": "Candid Subway Portrait",
+    "prompt": "Create a candid, realistic portrait of the young boy (youth) (keep the face exact same to same as uploaded photo) wearing a black hoodie listening to headphones on a subway train. They are leaning against the metal pole, looking at their phone, unaware of the camera. The lighting is a mix of the grim, greenish interior subway lights and the black darkness of the tunnel outside the window. The reflection of the subway car interior is faintly visible in the window behind them. The image should have slight film grain to mimic high-speed film stock like Ilford Delta 3200. Aspect ratio: 9:16.",
+    "tags": ["portrait", "subway", "candid", "film", "cinematic"],
+    "image": "assets/images/upload-your-subway-pic.jpg",
+    "rating": 5.0
+  }
+]

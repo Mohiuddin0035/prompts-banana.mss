@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&lt;prompts/🍌&gt;</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="system-status">
+    <span class="status-dot"></span> ONLINE <span id="clock">[00:00:00]</span>
+</div>
+
+    <div class="trophy-btn" onclick="openLeaderboard()" title="View Editor's Choice">🏆</div>
+
+    <header>
+        <div class="logo-area">
+            <span id="typing-target"></span><span class="cursor">|</span>
+        </div>
+
+        <p class="subtitle fade-in-delayed">_curated_collection_of_ideas.exe</p>
+        
+        <div class="search-container fade-in-delayed">
+            <input type="text" id="searchInput" placeholder="Search prompts (e.g. #setup)...">
+        </div>
+    </header>
+
+    <main id="prompt-container">
+        </main>
+
+    <div id="leaderboard-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLeaderboard()">&times;</span>
+            
+            <h2 style="font-size: 1.4rem; border-bottom: 1px solid #333; padding-bottom: 1rem; margin-bottom: 1rem; color: #fff;">
+                🏆 Editor's Choice 
+                <span style="font-size: 0.7rem; background: var(--accent); color: white; padding: 3px 8px; border-radius: 4px; vertical-align: middle; margin-left: 10px; letter-spacing: 1px;">
+                    THIS MONTH
+                </span>
+            </h2>
+
+            <div id="leaderboard-list">
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="disclaimer">
+            <p class="disclaimer-title">This is a curated prompt library for inspiration and learning.</p>
+            <p>"All rights remain with the original creators, and takedown requests are respected.<br>
+            Content is shared for creative use only, with no intent to offend any religious, cultural, or personal beliefs.<br>
+            Displayed images are examples; AI outputs may vary and are inherently unpredictable."</p>
+        </div>
+        <p class="credit">built_by <span class="highlight">Saikat</span> // © 2025</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
