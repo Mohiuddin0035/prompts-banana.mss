@@ -1,11 +1,18 @@
 let allPrompts = []; 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Run Header Animation First
-    runHeaderTypingEffect().then(() => {
-        // 2. Load Website Data after animation finishes
+    // Check if intro was already shown in this session
+    if (!sessionStorage.getItem('introShown')) {
+        // Jodi age na dekhe thake -> Run Animation
+        runHeaderTypingEffect().then(() => {
+            sessionStorage.setItem('introShown', 'true'); // Mark as shown
+            initializeWebsite();
+        });
+    } else {
+        // Jodi age dekhe thake -> Skip Animation & Show Content Instantly
+        skipIntroAnimation();
         initializeWebsite();
-    });
+    }
 });
 
 // ============ HEADER ANIMATION LOGIC ============
@@ -44,7 +51,6 @@ async function runHeaderTypingEffect() {
     await delay(800);
 
     // Step 4: Backspace until ONLY "#" remains
-    // This will delete from right to left until 1 char is left
     await backspace(1, 60); 
 
     // Step 5: Glow Effect
@@ -54,16 +60,50 @@ async function runHeaderTypingEffect() {
 
     // Step 6: Final Logo Swap (Pop Effect)
     target.classList.remove('neon-hash-active');
-    // Replace the # with the full logo structure
     target.innerHTML = `<span class="final-logo">&lt;prompts/<span class="banana">🍌</span>&gt;</span>`;
     
     // Reveal Subtitle and Search
     document.querySelectorAll('.fade-in-delayed').forEach(el => el.classList.add('visible'));
 }
 
+// --- NEW FUNCTION: Skip Animation Logic ---
+function skipIntroAnimation() {
+    const target = document.getElementById('typing-target');
+    const cursor = document.querySelector('.cursor');
+
+    // Hide cursor immediately
+    cursor.style.display = 'none';
+
+    // Show Final Logo immediately (No animation)
+    target.innerHTML = `<span class="final-logo" style="animation:none; opacity:1; transform:scale(1);">&lt;prompts/<span class="banana">🍌</span>&gt;</span>`;
+
+    // Show Search & Subtitle immediately
+    document.querySelectorAll('.fade-in-delayed').forEach(el => {
+        el.classList.add('visible');
+        el.style.transition = 'none'; // No fade effect, just show
+    });
+}
+
+
+// ============ SYSTEM CLOCK LOGIC ============
+function startSystemClock() {
+    const clockElement = document.getElementById('clock');
+    if(!clockElement) return; // Safety check
+    
+    function updateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-GB', { hour12: false });
+        clockElement.innerText = `[${timeString}]`;
+    }
+    setInterval(updateTime, 1000);
+    updateTime(); 
+}
+
 
 // ============ MAIN WEBSITE LOGIC ============
 function initializeWebsite() {
+    startSystemClock(); // Start the clock
+
     const container = document.getElementById('prompt-container');
     const searchInput = document.getElementById('searchInput');
 
@@ -78,26 +118,29 @@ function initializeWebsite() {
         })
         .catch(error => {
             console.error('Error:', error);
-            container.innerHTML = '<p style="text-align:center; color:red;">Error loading database._</p>';
+            // container.innerHTML = '<p style="text-align:center; color:red;">Error loading database._</p>';
         });
 
     // Search Logic
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase().trim().replace('#', '');
-        if (searchTerm === "") { renderCards(allPrompts); } 
-        else {
-            const filtered = allPrompts.filter(item => 
-                item.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-            );
-            renderCards(filtered);
-        }
-        observeCards();
-    });
+    if(searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim().replace('#', '');
+            if (searchTerm === "") { renderCards(allPrompts); } 
+            else {
+                const filtered = allPrompts.filter(item => 
+                    item.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+                );
+                renderCards(filtered);
+            }
+            observeCards();
+        });
+    }
 }
 
-// Render Cards with Star Ratings
+// Render Cards
 function renderCards(data) {
     const container = document.getElementById('prompt-container');
+    if(!container) return;
     container.innerHTML = '';
     
     if(data.length === 0) {
@@ -134,6 +177,8 @@ function renderCards(data) {
 // Leaderboard Logic
 function setupLeaderboard(data) {
     const list = document.getElementById('leaderboard-list');
+    if(!list) return;
+
     const sorted = [...data].sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 10);
     let html = '';
     sorted.forEach((item, index) => {
@@ -177,21 +222,3 @@ function observeCards() {
     }, { threshold: 0.1 });
     cards.forEach(card => observer.observe(card));
 }
-
-// --- SYSTEM CLOCK LOGIC ---
-function startSystemClock() {
-    const clockElement = document.getElementById('clock');
-    
-    function updateTime() {
-        const now = new Date();
-        // Format: HH:MM:SS
-        const timeString = now.toLocaleTimeString('en-GB', { hour12: false });
-        clockElement.innerText = `[${timeString}]`;
-    }
-    
-    setInterval(updateTime, 1000);
-    updateTime(); // Run immediately
-}
-
-// Call this function when DOM is ready
-startSystemClock();
