@@ -272,7 +272,7 @@
         "emotion",
         "cinematic"
     ],
-    "image": "assets/images/prompts19.jpeg",
+    "image": "assets/images/prompts19.png",
     "rating": 3.5
 }
 ,
@@ -347,7 +347,7 @@
         "loneliness",
         "light"
     ],
-    "image": "assets/images/prompts24.jpeg",
+    "image": "assets/images/prompts24.png",
     "rating": 3.5
 }
 ]
