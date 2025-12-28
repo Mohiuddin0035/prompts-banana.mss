@@ -17,6 +17,10 @@
     <span class="status-dot"></span> ONLINE <span id="clock">[00:00:00]</span>
 </div>
 
+<div class="tips-btn-wrapper fade-in-delayed">
+    <button class="tips-btn" onclick="openTips()">[ TIPS & TRICKS ]</button>
+</div>
+
     <div class="trophy-btn" onclick="openLeaderboard()" title="View Editor's Choice">🏆</div>
 
     <header>
@@ -69,5 +73,45 @@
 </div>
 
     <script src="assets/js/main.js"></script>
+
+    <div id="tips-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>> Nano_Banana_Tips.txt</h2>
+            <span class="close-modal" onclick="closeTips()">&times;</span>
+        </div>
+        <div class="modal-body tips-content">
+            <h3 style="color: #FFD700; margin-bottom: 20px; font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Tips for Best Results with Nano Banana</h3>
+
+            <div style="margin-bottom: 15px;">
+                <strong style="color: #fff; font-size: 1rem;">1. Start simple.</strong><br>
+                <span style="color: #ccc;">Begin with your actual idea or base prompt. Don’t overthink it on the first try.</span>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <strong style="color: #fff; font-size: 1rem;">2. Refine, don’t overload.</strong><br>
+                <span style="color: #ccc;">If the result isn’t right, add a few clear details (lighting, mood, pose). Avoid adding too many instructions at once—it can confuse the model.</span>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <strong style="color: #fff; font-size: 1rem;">3. Fix face mismatch properly.</strong><br>
+                <span style="color: #ccc;">If the face doesn’t match, edit your prompt and add this line at the end:</span>
+                <div style="background: rgba(255,255,255,0.05); padding: 10px; border-left: 3px solid #FFD700; margin-top: 5px; font-family: 'Courier New', monospace; color: #a5f3fc; font-size: 0.9rem;">
+                    "Use reference photo 100% for face details."
+                </div>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <strong style="color: #fff; font-size: 1rem;">4. Use visual guidance.</strong><br>
+                <span style="color: #ccc;">If it still doesn't work, take a screenshot of the target style and prompt:</span>
+                <div style="background: rgba(255,255,255,0.05); padding: 10px; border-left: 3px solid #FFD700; margin-top: 5px; font-family: 'Courier New', monospace; color: #a5f3fc; font-size: 0.9rem;">
+                    "The result should look like this, but with the reference image I provided."
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 25px; color: #FFD700; font-weight: bold; opacity: 0.8;">_Simple steps. Better control. Cleaner results._</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>

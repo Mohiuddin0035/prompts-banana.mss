@@ -247,3 +247,18 @@ document.addEventListener("DOMContentLoaded", () => {
         if(warningBox) warningBox.style.display = 'none';
     }
 });
+// --- TIPS MODAL LOGIC ---
+window.openTips = () => { 
+    document.getElementById('tips-modal').style.display = 'block'; 
+}
+window.closeTips = () => { 
+    document.getElementById('tips-modal').style.display = 'none'; 
+}
+
+// Close modal if clicked outside
+window.addEventListener('click', (event) => {
+    const tipsModal = document.getElementById('tips-modal');
+    if (event.target == tipsModal) {
+        tipsModal.style.display = "none";
+    }
+});

@@ -397,3 +397,60 @@ footer {
         display: flex;
     }
 }
+/* --- FIX ISSUE 1: Leaderboard Scroll --- */
+/* লিডারবোর্ড এখন স্ক্রিনের বাইরে যাবে না, ভেতরে স্ক্রল হবে */
+#leaderboard-list {
+    max-height: 50vh; /* স্ক্রিনের অর্ধেক হাইট */
+    overflow-y: auto; /* স্ক্রলবার চালু */
+    padding-right: 5px; /* স্ক্রলবার থেকে টেক্সটের গ্যাপ */
+}
+
+/* --- FIX ISSUE 3: Prompt Text Scroll (The Vital One) --- */
+/* কার্ডের সাইজ ফিক্সড থাকবে, প্রম্পট বড় হলে ভেতরে স্ক্রল হবে */
+.card-prompt-box p {
+    max-height: 120px; /* এই হাইটের বেশি হলে স্ক্রল আসবে */
+    overflow-y: auto;
+    padding-right: 8px;
+    margin-bottom: 10px;
+    /* ফ্যান্সি স্ক্রলবার */
+    scrollbar-width: thin; 
+    scrollbar-color: var(--accent) rgba(255, 255, 255, 0.05);
+}
+
+/* --- FIX ISSUE 2: Tips Button Style --- */
+.tips-btn-wrapper {
+    margin-top: 8px; /* Online status থেকে একটু গ্যাপ */
+    text-align: left;
+}
+
+.tips-btn {
+    background: transparent;
+    border: 1px solid rgba(0, 255, 255, 0.3); /* সায়ান কালার বর্ডার */
+    color: #0ff;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    font-family: var(--font-console);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.1);
+}
+
+.tips-btn:hover {
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); /* গ্লো ইফেক্ট */
+    transform: translateY(-2px);
+}
+
+/* Tips Modal Design (Leaderboard এর মতোই) */
+.tips-content {
+    line-height: 1.6;
+    color: #ddd;
+    font-size: 0.9rem;
+}
+.tips-content li {
+    margin-bottom: 10px;
+    list-style-type: square;
+    margin-left: 20px;
+}
