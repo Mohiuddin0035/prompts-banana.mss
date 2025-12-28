@@ -454,3 +454,43 @@ footer {
     list-style-type: square;
     margin-left: 20px;
 }
+
+/* --- FIX OVERLAP ISSUE --- */
+/* টিপস বাটনটিকে অনলাইন ব্যাজের নিচে নামানো */
+.tips-btn-wrapper {
+    margin-top: 20px !important; /* গ্যাপ বাড়ানো হলো */
+    display: inline-block; /* ঠিকঠাক পজিশন নেওয়ার জন্য */
+}
+
+/* --- FIX MODAL SCROLLBAR ISSUE --- */
+/* মডালের বডির হাইট ফিক্স করা এবং স্ক্রলবার চালু করা */
+.modal-body.tips-content {
+    max-height: 60vh; /* স্ক্রিনের ৬০% এর বেশি বড় হবে না */
+    overflow-y: auto; /* লেখা বেশি হলে স্ক্রলবার আসবে */
+    padding-right: 10px; /* স্ক্রলবার থেকে লেখার দূরত্ব */
+
+    /* --- সুন্দর কাস্টম স্ক্রলবার ডিজাইন --- */
+    /* Firefox এর জন্য */
+    scrollbar-width: thin;
+    scrollbar-color: #0ff rgba(0, 255, 255, 0.1);
+}
+
+/* Chrome, Edge, Safari এর জন্য কাস্টম স্ক্রলবার */
+.modal-body.tips-content::-webkit-scrollbar {
+    width: 6px; /* স্ক্রলবার কতটা মোটা হবে */
+}
+
+.modal-body.tips-content::-webkit-scrollbar-track {
+    background: rgba(0, 255, 255, 0.05); /* স্ক্রলবারের পেছনের রঙ (ট্রান্সপারেন্ট) */
+    border-radius: 10px;
+}
+
+.modal-body.tips-content::-webkit-scrollbar-thumb {
+    background: #0ff; /* স্ক্রলবারের রঙ (সায়ান/নিয়ন) */
+    border-radius: 10px; /* গোলগাল ভাব */
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* হালকা গ্লো ইফেক্ট */
+}
+
+.modal-body.tips-content::-webkit-scrollbar-thumb:hover {
+    background: #00cccc; /* মাউস নিলে একটু গাঢ় হবে */
+}
