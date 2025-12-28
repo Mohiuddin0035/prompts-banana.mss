@@ -1,15 +1,13 @@
 let allPrompts = []; 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Check if intro was already shown in this session
+    // Session Storage Check for Intro
     if (!sessionStorage.getItem('introShown')) {
-        // Jodi age na dekhe thake -> Run Animation
         runHeaderTypingEffect().then(() => {
-            sessionStorage.setItem('introShown', 'true'); // Mark as shown
+            sessionStorage.setItem('introShown', 'true');
             initializeWebsite();
         });
     } else {
-        // Jodi age dekhe thake -> Skip Animation & Show Content Instantly
         skipIntroAnimation();
         initializeWebsite();
     }
@@ -21,15 +19,12 @@ async function runHeaderTypingEffect() {
     const cursor = document.querySelector('.cursor');
     const delay = ms => new Promise(r => setTimeout(r, ms));
 
-    // Typing Helper
     async function typeText(text, speed = 80) {
         for (let char of text) {
             target.innerText += char;
             await delay(speed);
         }
     }
-
-    // Backspace Helper
     async function backspace(limit, speed = 50) {
         while (target.innerText.length > limit) {
             target.innerText = target.innerText.slice(0, -1);
@@ -37,59 +32,37 @@ async function runHeaderTypingEffect() {
         }
     }
 
-    // Step 1: Type "Create your imagination.....!"
     await delay(500);
-    await typeText("Create your imagination.....!", 70);
-    await delay(1500); // Wait for reading
-
-    // Step 2: Delete Everything
+    await typeText("Shape the unseen.....!", 70);
+    await delay(1500);
     await backspace(0, 30);
     await delay(300);
-
-    // Step 3: Type "#https://github.com/mohiuddin0035/"
-    await typeText("#https://github.com/mohiuddin0035/", 70);
+    await typeText("#github.com/mohiuddin0035/", 70);
     await delay(800);
-
-    // Step 4: Backspace until ONLY "#" remains
     await backspace(1, 60); 
-
-    // Step 5: Glow Effect
-    cursor.style.display = 'none'; // Hide cursor
-    target.classList.add('neon-hash-active'); // Scale Up & Glow Blue
+    cursor.style.display = 'none';
+    target.classList.add('neon-hash-active');
     await delay(1200); 
-
-    // Step 6: Final Logo Swap (Pop Effect)
     target.classList.remove('neon-hash-active');
     target.innerHTML = `<span class="final-logo">&lt;prompts/<span class="banana">🍌</span>&gt;</span>`;
-    
-    // Reveal Subtitle and Search
     document.querySelectorAll('.fade-in-delayed').forEach(el => el.classList.add('visible'));
 }
 
-// --- NEW FUNCTION: Skip Animation Logic ---
 function skipIntroAnimation() {
     const target = document.getElementById('typing-target');
     const cursor = document.querySelector('.cursor');
-
-    // Hide cursor immediately
     cursor.style.display = 'none';
-
-    // Show Final Logo immediately (No animation)
     target.innerHTML = `<span class="final-logo" style="animation:none; opacity:1; transform:scale(1);">&lt;prompts/<span class="banana">🍌</span>&gt;</span>`;
-
-    // Show Search & Subtitle immediately
     document.querySelectorAll('.fade-in-delayed').forEach(el => {
         el.classList.add('visible');
-        el.style.transition = 'none'; // No fade effect, just show
+        el.style.transition = 'none';
     });
 }
 
-
-// ============ SYSTEM CLOCK LOGIC ============
+// ============ SYSTEM CLOCK ============
 function startSystemClock() {
     const clockElement = document.getElementById('clock');
-    if(!clockElement) return; // Safety check
-    
+    if(!clockElement) return;
     function updateTime() {
         const now = new Date();
         const timeString = now.toLocaleTimeString('en-GB', { hour12: false });
@@ -99,15 +72,12 @@ function startSystemClock() {
     updateTime(); 
 }
 
-
-// ============ MAIN WEBSITE LOGIC ============
+// ============ MAIN LOGIC ============
 function initializeWebsite() {
-    startSystemClock(); // Start the clock
-
+    startSystemClock();
     const container = document.getElementById('prompt-container');
     const searchInput = document.getElementById('searchInput');
 
-    // Fetch Data
     fetch('data/prompts.json')
         .then(response => response.json())
         .then(data => {
@@ -118,10 +88,8 @@ function initializeWebsite() {
         })
         .catch(error => {
             console.error('Error:', error);
-            // container.innerHTML = '<p style="text-align:center; color:red;">Error loading database._</p>';
         });
 
-    // Search Logic
     if(searchInput) {
         searchInput.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase().trim().replace('#', '');
@@ -137,7 +105,7 @@ function initializeWebsite() {
     }
 }
 
-// Render Cards
+// --- UPDATED: Render Cards (Added ID to div) ---
 function renderCards(data) {
     const container = document.getElementById('prompt-container');
     if(!container) return;
@@ -152,6 +120,9 @@ function renderCards(data) {
         const div = document.createElement('div');
         div.classList.add('card');
         
+        // NEW: Assign a specific ID to finding it later
+        div.id = `prompt-${item.id}`;
+
         const rating = item.rating || 0;
         const fullStars = Math.floor(rating);
         const hasHalfStar = rating % 1 !== 0;
@@ -174,7 +145,7 @@ function renderCards(data) {
     });
 }
 
-// Leaderboard Logic
+// --- UPDATED: Leaderboard (Clickable Items) ---
 function setupLeaderboard(data) {
     const list = document.getElementById('leaderboard-list');
     if(!list) return;
@@ -184,12 +155,14 @@ function setupLeaderboard(data) {
     sorted.forEach((item, index) => {
         let rankBadge = '';
         let rowStyle = 'padding: 15px 10px; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between;';
+        
         if (index === 0) { rankBadge = '🥇'; rowStyle += 'background: linear-gradient(90deg, rgba(255,215,0,0.1), transparent); border-left: 3px solid #FFD700;'; }
         else if (index === 1) { rankBadge = '🥈'; }
         else if (index === 2) { rankBadge = '🥉'; }
         else { rankBadge = `#${index + 1}`; }
         
-        html += `<div style="${rowStyle}">
+        // ADDED: onclick event and class "leaderboard-item"
+        html += `<div class="leaderboard-item" onclick="scrollToPrompt(${item.id})" style="${rowStyle}">
                     <div style="display:flex; align-items:center; gap:12px;">
                         <span style="font-size:1.2rem;">${rankBadge}</span>
                         <span style="font-weight:bold; color: var(--text-main); font-size: 0.95rem;">${item.title}</span>
@@ -202,6 +175,40 @@ function setupLeaderboard(data) {
     });
     list.innerHTML = html;
 }
+
+// --- NEW FUNCTION: Scroll to Prompt ---
+window.scrollToPrompt = (id) => {
+    // 1. Reset Search (To make sure hidden cards appear)
+    const searchInput = document.getElementById('searchInput');
+    if(searchInput) {
+        searchInput.value = ''; // Clear text
+        renderCards(allPrompts); // Show all cards
+        observeCards(); // Re-attach animation
+    }
+
+    // 2. Close Modal
+    closeLeaderboard();
+
+    // 3. Find and Scroll
+    setTimeout(() => {
+        const element = document.getElementById(`prompt-${id}`);
+        if(element) {
+            // Smooth scroll to center
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Add Golden Glow Effect
+            element.classList.add('highlight-card');
+            
+            // Remove Glow after 2 seconds
+            setTimeout(() => {
+                element.classList.remove('highlight-card');
+            }, 2000);
+        } else {
+            console.log("Card not found with ID:", id);
+        }
+    }, 300); // Small delay to let modal close first
+}
+
 
 // Utils
 window.openLeaderboard = () => { document.getElementById('leaderboard-modal').style.display = 'block'; }

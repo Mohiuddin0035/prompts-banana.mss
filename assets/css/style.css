@@ -333,3 +333,20 @@ footer {
 @media (max-width: 600px) {
     .system-status { display: none; }
 }
+
+/* --- LEADERBOARD INTERACTION --- */
+.leaderboard-item {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.leaderboard-item:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Scroll Highlight Effect */
+.highlight-card {
+    border-color: #FFD700 !important; /* Gold Border */
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.4) !important; /* Gold Glow */
+    transform: scale(1.03) !important;
+    z-index: 10;
+}
