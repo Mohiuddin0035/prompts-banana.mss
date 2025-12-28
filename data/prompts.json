@@ -5,7 +5,7 @@
     "prompt": "Create a candid, realistic portrait of the young boy (youth) (keep the face exact same to same as uploaded photo) wearing a black hoodie listening to headphones on a subway train. They are leaning against the metal pole, looking at their phone, unaware of the camera. The lighting is a mix of the grim, greenish interior subway lights and the black darkness of the tunnel outside the window. The reflection of the subway car interior is faintly visible in the window behind them. The image should have slight film grain to mimic high-speed film stock like Ilford Delta 3200. Aspect ratio: 9:16.",
     "tags": ["portrait", "subway", "candid", "film", "cinematic"],
     "image": "assets/images/subway.webp",
-    "rating": 5.0
+    "rating": 4.8
   }
   ,
 {
@@ -19,6 +19,335 @@
         "lifestyle"
     ],
     "image": "assets/images/prompt2.jpeg",
-    "rating": 5
+    "rating": 4.75
+}
+,
+{
+    "id": 3,
+    "title": "Keep Calm and Avoid the Battle",
+    "prompt": "Ultra-realistic, high-resolution cinematic poster in the style of LEO. A man with messy, slightly long black hair and a trimmed beard looks down calmly, standing in a cold snowy environment. He is wearing a light gray winter jacket with his sleeves slightly rolled up, and one hand casually placed in his pocket while the other is partly visible. His face and hair have a frosty touch, as if dusted with snow. The background is bright white with soft blue-gray shadows, giving a cold and peaceful tone. A double exposure effect merges his torso with a snowy forest pathway where a smaller version of him is seen running through the trees. Text on the left side reads KEEP CALM AND AVOID THE BATTLE in elegant white serif font. No red wax logo or any text at the bottom. The entire composition should be ultra-detailed, cinematic, realistic, and atmospheric — perfectly balanced lighting, soft tones, and sharp textures exactly like a professional movie poster. Make sure the 100% face of Uploaded image.",
+    "tags": [
+        "CinematicWinterPoster",
+        "DoubleExposure",
+        "ColdSilenceAesthetic",
+        "SnowFrostPortrait"
+    ],
+    "image": "assets/images/prompts3.jpeg",
+    "rating": 5.0
+}
+,
+{
+    "id": 4,
+    "title": "Where Light Learns to Stay Silent",
+    "prompt": "Ultra-realistic portrait of a man wearing black knit sweater and sunglasses, soft directional sunlight casting dramatic shadows on face, minimalistic indoor setup, Sony A7R IV 85mm f/1.4, fine-art composition, editorial tone.",
+    "tags": [
+        "portrait",
+        "sunglasses",
+        "shadow",
+        "minimal",
+        "sunlight"
+    ],
+    "image": "assets/images/prompts4.jpeg",
+    "rating": 4.2
+}
+,
+{
+    "id": 5,
+    "title": "Before the Lights Decide Who He Is!",
+    "prompt": "Generate a hyper-realistic cinematic editorial studio portrait of the uploaded person (preserve the exact real face, hairstyle, skin tone, and body identity no changes)\n\nDressup: Formal Look, wearing formal dress like white shirt, black pant and shoes with dark red tie.\n\nScene: dark luxury studio with thick drifting smoke, adding dramatic layers and depth.\n\nLighting: top-left spotlight cutting through haze, creating strong highlights and deep cinematic shadows across the\n\n1,340\n\n2,366\n\nframe.\n\nComposition: show three versions of the same person in the same frame. one is sitting on a chair, another is standing beside him and another one is tying his shoes.\n\n5\n\n325",
+    "tags": [
+        "formal",
+        "studio",
+        "smoke",
+        "shadow",
+        "portrait"
+    ],
+    "image": "assets/images/prompts5.jpeg",
+    "rating": 4.9
+}
+,
+{
+    "id": 6,
+    "title": "Comfort Looks Like Control",
+    "prompt": "Hyper-realistic cinematic vertical (3:4) half-body portrait of a young man(preserve the exact real face, hairstyle, skin tone, and body identity no changes) leaning back on a sofa, arms crossed, gazing around. Wearing stylish luxury kurta with rolled sleeves and leather wristwatch. Modern luxury living room with morning light streaming through a large glass window, creating cinematic natural lighting, creamy bokeh, and sharp focus. 8K detail, shallow depth of field, warm color grading, eye-level perspective.",
+    "tags": [
+        "kurta",
+        "luxury",
+        "portrait",
+        "morning",
+        "window"
+    ],
+    "image": "assets/images/prompts6.jpeg",
+    "rating": 4.5
+}
+,
+{
+    "id": 7,
+    "title": "Between the Glass and the Rain",
+    "prompt": "พอร์ตเทรตสมจริงระดับภาพยนตร์สไตล์ Wong Kar-wai \nโดยใช้รูปอัปโหลดเป็นต้นแบบใบหน้า ขับเน้นสันกรามและลำคอให้คมชัดราวกับปฏิมากรรม ใบหน้าและเอกลักษณ์เดิมคงเหมือนเดิม\n\nท่าทาง: นั่งเอนศีรษะพิงกระจก มือวางบนขอบ สายตาเหม่อมองไฟถนน \nฉาก: ภายในแท็กซี่เก่า เบาะหนังซีด กระจกมีฝ้าฝน ไฟถนน streak blur \nมุมกล้อง: ถ่ายจากนอกกระจก เงาสะท้อนซ้อนกับใบหน้า \nแสง: นีออนแดง-เขียววิ่งผ่าน ใบหน้าเปลี่ยนสีตามแสง \nเสื้อผ้า: เชิ้ตดำติดกระดุม คลายเล็กน้อย ผมเปียกชื้น \nโทนภาพ: Contrast แดง-เขียว Film grain หนา Motion blur ชัด Glow เบลอรอบไฟรถ \nอารมณ์: เหงา โดดเดี่ยว เมืองใหญ่ที่ไร้เสียงตอบ",
+    "tags": [
+        "cinematic",
+        "neon",
+        "rain",
+        "taxi",
+        "loneliness"
+    ],
+    "image": "assets/images/prompts7.jpeg",
+    "rating": 4.4
+}
+,
+{
+    "id": 8,
+    "title": "The City Passed Him Without Asking",
+    "prompt": "Wong Kar-wai Style Cinematic Portrait\nA photorealistic, cinematic portrait in the style of Wong Kar-wai, using the uploaded image as a face reference. Emphasize the jawline and neck to be sharp, almost sculptural, while maintaining the original facial features and identity.\nPose: Sitting, head leaning against the window, hands resting on the edge, eyes gazing wistfully at the streetlights.\nSetting: Inside an old taxi with faded leather seats.",
+    "tags": [
+        "cinematic",
+        "taxi",
+        "night",
+        "neon",
+        "solitude"
+    ],
+    "image": "assets/images/prompts8.jpeg",
+    "rating": 4.45
+}
+,
+{
+    "id": 9,
+    "title": "The Light That Found Only Him!",
+    "prompt": "An emotionally charged cinematic portrait of a young man (preserve the exact real face, hairstyle, skin tone, and body identity no changes), head slightly bowed, dressed in a black puffer jacket and grey hoodie. A warm amber beam isolates him from the dark void, gently illuminating his hair and glasses to capture a mood of deep solitude.\",\n \"size\": \"1024x1024\",\n \"n\": 1",
+    "tags": [
+        "portrait",
+        "solitude",
+        "dark",
+        "light",
+        "jacket"
+    ],
+    "image": "assets/images/prompts9.jpeg",
+    "rating": 4.47
+}
+,
+{
+    "id": 10,
+    "title": "When the Mind Breaks Its Silence!",
+    "prompt": "Convert this image into a Fine black and white photography of a handsome young man (take reference face as uploaded image face)with dark, his head tilted back in a moment of intense creative thought or ecstasy. He is wearing an open, loose white collared shirt, standing in a dimly lit study filled with stacks of books and papers. The image is captured with a slow shutter speed, creating dramatic horizontal motion blur that streaks the background and the edges of his form,",
+    "tags": [
+        "blackandwhite",
+        "motionblur",
+        "books",
+        "thought",
+        "portrait"
+    ],
+    "image": "assets/images/prompts10.jpeg",
+    "rating": 4.6
+}
+,
+{
+    "id": 11,
+    "title": "At the Edge, the World Goes Quiet",
+    "prompt": "Create a hyper-realistic portrait of a man sitting in a cliff a of rock in mountain, (Used reference photo 100% for Face details) the full shot of a man from the side view, with Wavy Farming massy hair, sitting on the edge of a rocky cliff. He is wearing a Black Oversized Hoodie and Brown oversized pants and white sneakers. A rests on the rock beside him. In the full dence misty background, there is a foggy, vast mountain view with a light, overcast sky. High-quality photo, cinematic light, deep shadows and bright highlights.",
+    "tags": [
+        "mountain",
+        "cliff",
+        "fog",
+        "portrait",
+        "hoodie"
+    ],
+    "image": "assets/images/prompts11.jpeg",
+    "rating": 4.8
+}
+,
+{
+    "id": 12,
+    "title": "Quiet Style, Loud Walls",
+    "prompt": "Edit this image without changing the original face. Make the person appear to be sitting casually on a wooden chair in a room with walls fully covered in retro-style newspaper and magazine clippings. They are wearing a Korean-style outfit. Their facial expression is calm and slightly serious. Warm, yellow-toned lighting gives the scene a vintage and aesthetic Y2K Korean street style vibe.",
+    "tags": [
+        "retro",
+        "newspaper",
+        "korean",
+        "vintage",
+        "portrait"
+    ],
+    "image": "assets/images/prompts12.jpeg",
+    "rating": 4.3
+}
+,
+{
+    "id": 13,
+    "title": "A Room That Still Smells Like Yesterday!",
+    "prompt": "Photorealistic retro Hong Kong 1990s portrait using the uploaded photo as the face reference, keeping the same face exactly as in the photo but styled as a handsome young man. The subject is shown half-body, leaning casually against a wall plastered with old yellowed Cantonese newspapers, wearing a loose white T-shirt tucked into relaxed high-waisted trousers with an elastic waistband, styled in authentic 90s Hong Kong street fashion. His expression is soft and melancholic, with messy hair falling naturally across the forehead, glossy lips, and slightly dewy skin for a cinematic charm. The setting is a narrow Hong Kong room illuminated by the warm tungsten glow of a bulb with a faint green spill, creating heavy shadows and blooming highlights. The portrait should look as if shot on a Nikon FM2 with a 50mm f/1.8 lens using Kodak Gold 200 film stock, with shallow depth of field, subject in sharp focus, visible grain, subtle scratches, and natural vignetting to enhance the retro film look.",
+    "tags": [
+        "hongkong",
+        "90s",
+        "film",
+        "portrait",
+        "newspaper"
+    ],
+    "image": "assets/images/prompts13.jpeg",
+    "rating": 4
+}
+,
+{
+    "id": 14,
+    "title": "A Face Between Headlines!",
+    "prompt": "Photorealistic retro Hong Kong 1990s portrait using the uploaded photo as the face reference, keeping the same face exactly as in the photo but styled as a handsome young man. The subject is shown half-body, leaning casually against a wall plastered with old yellowed Cantonese newspapers, wearing a loose white T-shirt tucked into relaxed high-waisted trousers with an elastic waistband, styled in authentic 90s Hong Kong street fashion. His expression is soft and melancholic, with messy hair falling naturally across the forehead, glossy lips, and slightly dewy skin for a cinematic charm. The setting is a narrow Hong Kong room illuminated by the warm tungsten glow of a bulb with a faint green spill, creating heavy shadows and blooming highlights. The portrait should look as if shot on a Nikon FM2 with a 50mm f/1.8 lens using Kodak Gold 200 film stock, with shallow depth of field, subject in sharp focus, visible grain, subtle scratches, and natural vignetting to enhance the retro film look.",
+    "tags": [
+        "hongkong",
+        "90s",
+        "film",
+        "portrait",
+        "retro"
+    ],
+    "image": "assets/images/prompts14.jpeg",
+    "rating": 4.1
+}
+,
+{
+    "id": 15,
+    "title": "A Moment Lost in the Crowd!",
+    "prompt": "Young man(preserve the exact real face, hairstyle, skin tone, and body identity no changes) with curly brown hair and light skin, wearing a beige overcoat over a dark shirt, standing in the center of a bustling city street. Slightly pensive expression. Background blurred with motion: people in coats and jackets, yellow taxis, city traffic. Sunlight filters through tall buildings, creating warm browns, golds, and muted grays. Shallow depth of field, cinematic and nostalgic urban photography style.",
+    "tags": [
+        "city",
+        "street",
+        "motion",
+        "portrait",
+        "sunlight"
+    ],
+    "image": "assets/images/prompts15.jpeg",
+    "rating": 4.3
+}
+,
+{
+    "id": 16,
+    "title": "Between Steps and Shadows!",
+    "prompt": "Create a realistic black-and-white street portrait based on the uploaded image. Preserve all facial features, accessories, and physical details exactly as in the reference photo.\n\nMid-torso framing, subject facing slightly sideways with a calm, thoughtful expression. Soft natural daylight, shallow depth of field, blurred pedestrians and city buildings in the background.\n\nCinematic monochrome tones, professional DSLR street photography look, 50mm lens, wide aperture.",
+    "tags": [
+        "blackandwhite",
+        "street",
+        "portrait",
+        "city",
+        "candid"
+    ],
+    "image": "assets/images/prompts16.jpeg",
+    "rating": 3.9
+}
+,
+{
+    "id": 17,
+    "title": "So… Anyone Wanna Buy a Toy?",
+    "prompt": "Prompt:\n\nCreate a 1/7 scale intelligent figurine in the picture in a realistic style, in a real environment. \n\nThe figurine is plattered on a computer desk. The figurine has a round transparent acrylic base, with no text on the base. The content on the screen is the Zbrush modeling process of this figurine. \n\nNext to the computer screen is a BANDAI-style toy packaging box with printing. The packaging features two-dimensional flat illusion",
+    "tags": [
+        "figurine",
+        "desk",
+        "zbrush",
+        "toy",
+        "model"
+    ],
+    "image": "assets/images/prompts17.jpeg",
+    "rating": 4.1
+}
+,
+{
+    "id": 18,
+    "title": "Moving Faster Than the Day...",
+    "prompt": "Cinematic street photography, stylish young\nman in motion, urban environment, motion blur effect. Blurred pedestrians passing by, shallow depth of field, natural overcast lighting, soft pastel tones, editorial fashion photography, candid moment, wearing a long coat, dynamic movement, film aesthetic, muted colors.",
+    "tags": [
+        "street",
+        "motion",
+        "fashion",
+        "blur",
+        "urban"
+    ],
+    "image": "assets/images/prompts18.jpeg",
+    "rating": 3.8
+}
+,
+{
+    "id": 19,
+    "title": "Where the Light Stops Asking!",
+    "prompt": "Create an image of a stylish black-and-white aesthetic portrait of me (use my image with accurate face 100%) sitting on the floor in dramatic lighting. Looking straight at the camera. He is wearing an oversized dark coat, with smooth, wavy, voluminous hair partially covering his face. His pose is emotional and introspective, sitting on a chair with his head slightly turned to the side. Shadows from a window fall across the wall behind him, creating a moody and artistic atmosphere. The overall vibe is mysterious, emotional, and cinematic.",
+    "tags": [
+        "blackandwhite",
+        "portrait",
+        "shadow",
+        "emotion",
+        "cinematic"
+    ],
+    "image": "assets/images/prompts19.jpeg",
+    "rating": 3.5
+}
+,
+{
+    "id": 20,
+    "title": "Warm Light, Cold Rain!",
+    "prompt": "A cinematic portrait of a young man sitting quietly beside a rain-streaked window, gazing out into the blurred, gray world beyond. He wears a dark wool coat with rich texture, a soft knitted scarf draped loosely around his neck, and his hands rest gently on the wooden window sill, fingers tracing faintly against the condensation. Warm indoor light spills across his face, casting a soft golden glow that contrasts with the cool, moody tones of the rain outside. His expression is thoughtful, calm yet distant, as though lost in memory or reflection. Subtle reflections of his face shimmer across the wet glass, mingling with the delicate trails of raindrops. Behind him, the blurred suggestion of a cozy interior-warm tones, faint glow of a lamp-adds intimacy without distraction.",
+    "tags": [
+        "rain",
+        "window",
+        "portrait",
+        "light",
+        "mood"
+    ],
+    "image": "assets/images/prompts20.jpeg",
+    "rating": 3.6
+}
+,
+{
+    "id": 21,
+    "title": "Light on the Edge of Thought!",
+    "prompt": "A high-resolution, cinematic, and photorealistic close-up profile portrait of a man. The image features dramatic split-lighting with a vibrant, glowing red light illuminating the top of his face and a contrasting, cool neon blue light casting a soft glow on his jawline and neck. He has a contemplative expression, looking upwards and away from the camera. The focus is sharp on his eye, with a dark, minimalist background. The style is moody, ethereal, and high-fashion.",
+    "tags": [
+        "portrait",
+        "neon",
+        "red",
+        "blue",
+        "fashion"
+    ],
+    "image": "assets/images/prompts21.jpeg",
+    "rating": 3.3
+}
+,
+{
+    "id": 22,
+    "title": "When Red Refuses to Fade",
+    "prompt": "Create a Vertical portrait shot in 1080x1920 format using the exact same face features, characterized by stark cinematic lighting and intense contrast. Captured with a slightly low, upward-facing angle that dramatizes the subject's jawline and neck, the composition evokes quiet dominance and sculptural elegance. The background is a deep, saturated crimson red, creating a bold visual clash with the model's luminous skin and dark wardrobe.",
+    "tags": [
+        "portrait",
+        "red",
+        "contrast",
+        "cinematic",
+        "power"
+    ],
+    "image": "assets/images/prompts22.jpeg",
+    "rating": 3
+}
+,
+{
+    "id": 23,
+    "title": "Trying to Touch the Dream!",
+    "prompt": "Prompt: Surreal close up of portrait of a me reaching my hand toward the camera, set against a pitch-black background. The scene is illuminated by a dramatic spotlight from above casting subtle highlights on his skin and sweater. His face dissolves into streaks of colored motion blur, smeared horizontally in glowing blues, whites, and faint reds, evoking dreamlike distortion. Foreground: sharply focused hand, tactile detail with soft skin textures, lit warmly. Midground: blurred body in deep shadow. Background: pure black, infinite depth. Effects: long exposure motion trails, spectral glow, cinematic light diffusion. Lens: close-up perspective, shallow depth of field, surrealist experimental photography style Mood: haunting, ethereal, introspective, with a sense of reaching into the unknown.",
+    "tags": [
+        "surreal",
+        "hand",
+        "blur",
+        "portrait",
+        "dark"
+    ],
+    "image": "assets/images/prompts23.jpeg",
+    "rating": 3.3
+}
+,
+{
+    "id": 24,
+    "title": "A Meeting That Never Happened...!",
+    "prompt": "Sebuah meja kecil menempel di dinding putih polos, dengan dua kursi kayu di kedua sisinya. Tidak ada manusia yang terlihat, namun bayangan di dinding menampilkan seorang pria sedang duduk  berhadapan dengan seorang wanita berhijab, bersulang dengan cangkir kopi putih, seolah sedang menikmati pertemuan yang hangat. Vas bening berisi tiga bunga berdiri di tengah meja, memantulkan bayangan indah ke dinding. Seorang lelaki duduk sendiri di kursi sebelah kiri menirukan bayangan pria yang ada di bayangan. Nuansa nostalgia kesedihan, rindu, muram. Cahaya matahari sore masuk dari kiri atas, menciptakan efek dramatis dengan sudut cahaya miring yang tajam. Suasana sunyi, puitis, dan penuh makna tersembunyi.",
+    "tags": [
+        "shadow",
+        "table",
+        "memory",
+        "loneliness",
+        "light"
+    ],
+    "image": "assets/images/prompts24.jpeg",
+    "rating": 3.5
 }
 ]
