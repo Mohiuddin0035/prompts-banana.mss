@@ -350,3 +350,50 @@ footer {
     transform: scale(1.03) !important;
     z-index: 10;
 }
+/* --- MOBILE WARNING TOAST --- */
+#mobile-warning {
+    display: none; /* Desktop e bondho thakbe */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid #FFD700; /* Yellow Border */
+    color: #cbd5e1;
+    padding: 12px 20px;
+    border-radius: 8px;
+    z-index: 9999;
+    font-size: 0.8rem;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+    animation: slideUp 0.5s ease-out;
+}
+
+.warning-content {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.close-warning {
+    cursor: pointer;
+    font-weight: bold;
+    color: #ff5555;
+    font-family: var(--font-console);
+}
+.close-warning:hover { color: #fff; }
+
+@keyframes slideUp {
+    from { transform: translate(-50%, 100px); opacity: 0; }
+    to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+/* Shudhu Mobile e dekhabe (Screen size 768px er niche hole) */
+@media (max-width: 768px) {
+    #mobile-warning {
+        display: flex;
+    }
+}

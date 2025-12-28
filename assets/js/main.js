@@ -229,3 +229,21 @@ function observeCards() {
     }, { threshold: 0.1 });
     cards.forEach(card => observer.observe(card));
 }
+// --- MOBILE WARNING LOGIC ---
+function closeWarning() {
+    const warningBox = document.getElementById('mobile-warning');
+    warningBox.style.opacity = '0';
+    setTimeout(() => {
+        warningBox.style.display = 'none';
+        // Optional: User jodi close kore, session er jonno r dekhabe na
+        sessionStorage.setItem('warningClosed', 'true');
+    }, 300);
+}
+
+// Check on load if warning should be hidden (User manually closed it before)
+document.addEventListener("DOMContentLoaded", () => {
+    if (sessionStorage.getItem('warningClosed') === 'true') {
+        const warningBox = document.getElementById('mobile-warning');
+        if(warningBox) warningBox.style.display = 'none';
+    }
+});
