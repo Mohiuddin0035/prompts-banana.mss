@@ -350,4 +350,19 @@
     "image": "assets/images/prompts24.png",
     "rating": 3.5
 }
+,
+{
+    "id": 25,
+    "title": "Seen Through the Light",
+    "prompt": "New Prompt Arrived 🔥🔥\n\nuse 100% face above uploaded photo \nA photorealistic, cinematic portrait of a stylish man in his late 20s with dark, voluminous hair and a well-groomed beard, wearing round sunglasses. He sits inside a moody café, shot from outside through a large glass window. Strong, directional sunlight illuminates his face, creating high contrast and deep shadows. The window shows subtle vertical reflections. The composition features a heavily blurred foreground , with warm bokeh lights. The atmosphere is contemplative and sophisticated, with rich, warm color grading.\nAlternative (Keyword-focused) Prompt:\ncinematic portrait, a handsome man with styled black hair and beard, wearing round sunglasses, inside a cafe, shot from outside through a window, dramatic natural lighting, strong shadows, high contrast, face illuminated, moody atmosphere, reflections on glass, shallow depth of field, blurred foreground table, warm bokeh background.",
+    "tags": [
+        "cafe",
+        "sunglasses",
+        "window",
+        "sunlight",
+        "portrait"
+    ],
+    "image": "assets/images/prompts25.jpg",
+    "rating": 4.9
+}
 ]
