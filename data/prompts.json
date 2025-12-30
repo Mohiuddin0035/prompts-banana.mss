@@ -365,4 +365,63 @@
     "image": "assets/images/prompts25.jpg",
     "rating": 4.9
 }
+,
+{
+    "id": 26,
+    "title": "Before the Next Move!",
+    "prompt": "An extreme close-up portrait of a man with a beard and tousled dark hair, wearing round gold-rimmed sunglasses. He gazes downwards with a look of intense contemplation. His face and hair are dramatically illuminated by dappled, warm sunlight filtering through an unseen object, creating a pattern of bright highlights and deep shadows. In the immediate foreground, out-of-focus chess pieces are rendered as large, shimmering teal and blue bokeh, creating an extremely shallow depth of field. The image has a high-contrast, cinematic quality with a moody atmosphere.",
+    "tags": [
+        "portrait",
+        "chess",
+        "sunlight",
+        "sunglasses",
+        "cinematic"
+    ],
+    "image": "assets/images/prompts26.jpeg",
+    "rating": 4.3
+}
+,
+{
+    "id": 27,
+    "title": "Listening to the Weather",
+    "prompt": "Under a brooding overcast sky, a young man stands in close side profile, his dark baseball cop edged with a subtle red accerit snug against windswect, thick hair. Black over-ear hepaphones rest lightly above his sick, rain kissed skin, where shimmering droplets catch the muted coastal light. His coritemplative goze stretches toward the rainy horizon evoking a quiet intensity within the pensive stillness. A cool palette of subdued grays and navy melds seamlessly with the gende crimson hints, while the damp fabric of his cop, the slick sheon of his sien, and the tousted hair stirred by a cool sea breeze offer Vivid texture controsts Soft natural shadows contour this features, enhanced by a tightly cropped composition and a gentie background blur that draws focus to tactile. details. The scene conveys a poised moment of incrospection, bathed in diffused, melancholic light.\nIMPORTANT - FACE LOCK Keep the subject's real face exactly the same as the reference image. Do NOT change facial structure, jawline, eyes shape, nose, lips, skin tone, beard, hairline, age, or expression. Maintain 100% identity accuracy. No beautification, no face swapping, no Al alteration. Preserve natural skin texture, pores, asymmetry, and imperfections. The person must be instantly recognizable as the same individual.",
+    "tags": [
+        "rain",
+        "profile",
+        "headphones",
+        "coast",
+        "mood"
+    ],
+    "image": "assets/images/prompts27.jpeg",
+    "rating": 3.2
+}
+,
+{
+    "id": 28,
+    "title": "Carrying the Mountain Within",
+    "prompt": "A close-up right-profile portrait captured with low ISO, a large aperture, and soft focus, featuring smooth minimal grain and a gentle vignette with subtle background bokeh. The person, fully based on the reference photo and gender-neutral, is rendered with a contemplative expression, wearing a black beanie and a dark jacket partially visible. Their profile seamlessly blends into a surreal mountainous wilderness scene with tall pine trees, rocky terrain, and a dramatic cloudy sky at sunset or dusk. Within the merged landscape, the silhouette of a lone hiker with a backpack stands on a rock, illuminated by warm light beneath, as mist and glowing highlights blend naturally into the outline of the face. Cool bluish-green forest tones contrast with warm amber light, creating a moody, introspective, surreal double-exposure aesthetic with deep greens, dark shadows, and warm highlights.\nIMPORTANT - FACE LOCK Keep the subject's real face exactly the same as the reference image. Do NOT change facial structure, jawline, eyes shape, nose, lips, skin tone, beard, hairline, age, or expression. Maintain 100% identity accuracy. No beautification, no face swapping, no Al alteration. Preserve natural skin texture, pores, asymmetry, and imperfections. The person must be instantly recognizable as the same individual.",
+    "tags": [
+        "double exposure",
+        "portrait",
+        "mountain",
+        "hiker",
+        "surreal"
+    ],
+    "image": "assets/images/prompts28.jpeg",
+    "rating": 3.1
+},
+{
+    "id": 29,
+    "title": "I Did Not Wear the Flag — I Am It 🇧🇩",
+    "prompt": "Ultra realistic portrait of a person wrapped in the Bangladesh national flag, where the person’s body is clearly emerging and glowing through the fabric of the flag. Dramatic cinematic atmosphere, surrounded by darkness, soft light highlighting the contours of the body on the flag, 8K HDR, highly detailed, emotional and powerful patriotic mood.",
+    "tags": [
+        "Bangladesh",
+        "flag",
+        "identity",
+        "emotion",
+        "patriotism"
+    ],
+    "image": "assets/images/prompts29.jpeg",
+    "rating": 3
+}
 ]
