@@ -423,5 +423,19 @@
     ],
     "image": "assets/images/prompts29.jpeg",
     "rating": 3
+},
+{
+    "id": 30,
+    "title": "Power Prefers the Chair",
+    "prompt": "Transform the person in the uploaded photo into a character in a gritty, 1920s Peaky Blinders-style graphic novel.\n\nMain Character: Transfer the subject’s exact facial features and hairstyle into the illustration. The character is sitting in a vintage wooden armchair with legs crossed, wearing a classic three-piece wool suit, a heavy overcoat, and a pocket watch with a visible chain. The character is holding a vintage revolver. The expression should be cold and calculated.\n\nComposition & Panels: The image must be a multi-panel comic book page layout:\n\nThe Large Center Panel: Shows the full-body pose of the character in the chair.\n\nThe Eye Panel: A horizontal inset panel showing a sharp, intense close-up of the character's eyes.\n\nBackground Panels: Smaller panels at the top showing an empty interior with a fireplace, a dark cobblestone street with a single Victorian lamp post, and a silhouette of an industrial factory with smoke rising from chimneys.\n\nArtistic Style: High-contrast noir comic book art. Use heavy black ink shadows, detailed cross-hatching, and a vintage 'halftone' or Ben-Day dot pattern for texture. The color palette should be limited to desaturated tones: deep blacks, charcoal grays, and a hint of aged sepia. No modern elements or bright colors.",
+    "tags": [
+        "peakyBlinders",
+        "comic",
+        "1920s",
+        "gangster",
+        "revolver"
+    ],
+    "image": "assets/images/prompts30.jpeg",
+    "rating": 3
 }
 ]
